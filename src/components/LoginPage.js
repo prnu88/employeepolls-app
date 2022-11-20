@@ -53,9 +53,9 @@ function LoginPage(props) {
             <div className="text-center">
                 <label>User</label><br/>
                 <select name="selectList" id="selectList" onChange={(e) => handleChange(e)}>
-                    <option value=""></option>
+                    <option key="" value=""></option>
                     {Object.keys(users).map((userId) => (
-                        <option value={userId}>{users[userId].name}</option>
+                        <option key={userId} value={userId}>{users[userId].name}</option>
                     ))}
                 </select>               
                 <br/><br/>
