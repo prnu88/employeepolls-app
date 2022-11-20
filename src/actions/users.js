@@ -1,4 +1,4 @@
-import {saveQuestionAnswer} from "../utils/Api";
+import {saveQuestionAnswer} from "../utils/api";
 import { showLoading, hideLoading } from "react-redux-loading-bar";
 
 export const RECEIVE_USERS = "RECEIVE_USERS";

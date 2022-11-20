@@ -1,4 +1,4 @@
-import { getInitialData } from "../utils/Api";
+import { getInitialData } from "../utils/api";
 import { receiveUsers } from "./users";
 import { receiveQuestions } from "./questions";
 import { showLoading, hideLoading } from "react-redux-loading-bar";

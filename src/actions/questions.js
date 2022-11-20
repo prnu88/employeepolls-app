@@ -1,4 +1,4 @@
-import { saveQuestion } from "../utils/Api";
+import { saveQuestion } from "../utils/api";
 import { showLoading, hideLoading } from "react-redux-loading-bar";
 import {addQuestionToUser} from "./users";
 
