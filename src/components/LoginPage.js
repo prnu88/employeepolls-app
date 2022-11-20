@@ -6,7 +6,7 @@ import { setAuthedUser } from "../actions/authedUser";
 
 function LoginPage(props) {
 
-    useEffect((props) => {
+    useEffect(() => {
         props.dispatch(handleInitialData());
       }, []);
 

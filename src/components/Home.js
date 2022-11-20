@@ -35,7 +35,7 @@ function Home(props){
         <div  className="solidborder">   
             <div className="parent">
                 {unAnsweredQuestionsArr.map((unAnsweredQuestion) => (
-                    <div className="child">
+                    <div key={unAnsweredQuestion.id} className="child">
                         <Poll key={unAnsweredQuestion.id} id={unAnsweredQuestion.id} author={unAnsweredQuestion.author} timestamp={unAnsweredQuestion.timestamp}/>
                     </div>
                 ))}
@@ -48,8 +48,8 @@ function Home(props){
         <div className="solidborder">
             <div className="parent">
                 {answeredQuestionsArr.map((answeredQuestion) => (
-                        <div className="child">
-                            <Poll  key={answeredQuestion.id}id={answeredQuestion.id} author={answeredQuestion.author} timestamp={answeredQuestion.timestamp}/>
+                        <div  key={answeredQuestion.id} className="child">
+                            <Poll  key={answeredQuestion.id} id={answeredQuestion.id} author={answeredQuestion.author} timestamp={answeredQuestion.timestamp}/>
                         </div>
                     ))}
             </div>
