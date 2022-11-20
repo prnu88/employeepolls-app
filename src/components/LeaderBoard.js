@@ -17,7 +17,7 @@ function LeaderBoard(props) {
               {usersIds.map((userId) => (
                   <tr>
                     <td>
-                      <div><img src={users[userId].avatarURL} className="avatar"/></div>
+                      <div><img alt="Avatar" src={users[userId].avatarURL} className="avatar"/></div>
                       <div>{users[userId].name}</div>
                       <div>{userId}</div>
                     </td>

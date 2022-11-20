@@ -1,4 +1,3 @@
-import { act } from "react-dom/test-utils";
 import { RECEIVE_USERS,ANSWER_QUESTION,ADD_QUESTION_TO_USER } from "../actions/users";
 
 export default function users(state = {}, action) {

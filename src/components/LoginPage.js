@@ -37,7 +37,6 @@ function LoginPage(props) {
     
             if(userNameNotEmpty){
                 const currentURL = window.location.pathname;
-                console.log("Current URL" +  window.location.pathname);
                 if(currentURL === '/'){
                    navigate("/home")
                 }
