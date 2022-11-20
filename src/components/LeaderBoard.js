@@ -16,7 +16,7 @@ function LeaderBoard(props) {
                   <th>Total</th>
             </tr>
               {usersIds.map((userId) => (
-                  <tr key="userId">
+                  <tr key={userId}>
                     <td>
                       <div><img alt="Avatar" src={users[userId].avatarURL} className="avatar"/></div>
                       <div>{users[userId].name}</div>
