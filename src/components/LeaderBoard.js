@@ -8,6 +8,7 @@ function LeaderBoard(props) {
         <Nav></Nav>
         <div className="table1" >
             <table data-testid='leaderboard-tbl'>
+              <tbody>
             <tr>
                   <th>Users</th>
                   <th>Answered</th>
@@ -26,6 +27,7 @@ function LeaderBoard(props) {
                     <td>{users[userId].total}</td>
                   </tr>
               ))}
+              </tbody>
       </table>
     </div>
     </div>)
