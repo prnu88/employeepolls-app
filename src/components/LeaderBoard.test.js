@@ -37,6 +37,6 @@ describe("LeaderBoard Component", () => {
       expect(component.getByTestId('leaderboard-tbl')).toBeDefined();
       const table = component.getByTestId('leaderboard-tbl');
       const tableRows = table.children.length;
-      expect(tableRows).toEqual(2); 
+      expect(tableRows).toEqual(1); 
   });
 });
