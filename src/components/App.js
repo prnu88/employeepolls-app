@@ -1,37 +1,29 @@
-import { useEffect, Fragment } from "react";
-import { connect } from "react-redux";
-import { handleInitialData } from "../actions/shared";
-import Dashboard from "./Dashboard";
-import LoadingBar from "react-redux-loading-bar";
-import NewTweet from "./NewTweet";
-import TweetPage from "./TweetPage";
-import Nav from "./Nav";
-import { Routes, Route } from "react-router-dom";
+import '../App.css';
+import LoginPage from './LoginPage';
+import { Fragment } from 'react';
+import {Routes,Route} from "react-router-dom";
+import Home from "./Home";
+import LeaderBoard from "./LeaderBoard";
+import AddNewPoll from './AddNewPoll';
+import PollDetails from "./PollDetails";
+import NotFound from "./NotFound";
 
 const App = (props) => {
-  useEffect(() => {
-    props.dispatch(handleInitialData());
-  }, []);
 
   return (
     <Fragment>
-      <LoadingBar />
-      <div className="container">
-        <Nav />
-        {props.loading === true ? null : (
-          <Routes>
-            <Route path="/" exact element={<Dashboard />} />
-            <Route path="/tweet/:id" element={<TweetPage />} />
-            <Route path="/new" element={<NewTweet />} />
-          </Routes>
-        )}
+      <div className='container'>
+        <Routes>  
+          <Route path="/" exact element={<LoginPage/>}></Route>
+          <Route path="/home" exact element={<Home/>}></Route>
+          <Route path="/leaderboard" exact element={<LeaderBoard/>}></Route>
+          <Route path="/add" exact element={<AddNewPoll/>}></Route>
+          <Route path="/questions/:question_id" exact element={<PollDetails/>}></Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
     </Fragment>
-  );
-};
+  )
+}
 
-const mapStateToProps = ({ authedUser }) => ({
-  loading: authedUser === null,
-});
-
-export default connect(mapStateToProps)(App);
+export default App;
