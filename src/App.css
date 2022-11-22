@@ -136,6 +136,16 @@ li {
   width: 250px;
 }
 
+.btnstyle3{
+  height: 28px;
+  text-align: center;
+  background-color: white;
+  border-radius: 3px;
+  border-color: #008CBA;
+  color: #008CBA;
+  width: 250px;
+}
+
 .parent {
   margin: 1rem;
   padding: 1rem 1rem;
@@ -222,4 +232,10 @@ tr:first-child {
 .gohomelink{
   color: blue;
   text-decoration: underline;
+}
+
+.togglecontainer {
+  display: flex;
+  align-items: right;
+  justify-content: right
 }
