@@ -35,7 +35,7 @@ function PollDetails({authedUser,question_id,question,users,dispatch}) {
     const optionTwoText = question ? question.optionTwo.text : "";
 
     const answerPollDetailsOnClick = (text) => {
-        dispatch(handleAnswerQuestion(authedUser, question_id, text));
+        dispatch((authedUser, question_id, text));
     };
 
     if(!authedUser){

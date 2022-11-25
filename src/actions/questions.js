@@ -6,7 +6,14 @@ import {addQuestionToUser} from "./users";
 export const ADD_QUESTION = "ADD_QUESTION";
 export const _QUESTIONS = "_QUESTIONS";
 export const RECEIVE_QUESTIONS = "RECEIVE_QUESTIONS";
+export const ANSWER_QUESTION = "ANSWER_QUESTION";
 
+export function answerQuestion(question){
+  return {
+    type: ANSWER_QUESTION,
+    question,
+  }
+}
 
 export function addQuestion(question){
     return {
