@@ -5,6 +5,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import {handleAnswerQuestion} from "../actions/users";
 import LoginPage from "./LoginPage";
 import PollErrorPage from "./PollErrorPage";
+import { updateUserAnswerQuestion } from "../actions/questions";
 
 const withRouter = (Component) => {
     const ComponentWithRouterProp = (props) => {
@@ -35,7 +36,8 @@ function PollDetails({authedUser,question_id,question,users,dispatch}) {
     const optionTwoText = question ? question.optionTwo.text : "";
 
     const answerPollDetailsOnClick = (text) => {
-        dispatch((authedUser, question_id, text));
+        dispatch(handleAnswerQuestion(authedUser, question_id, text));
+        dispatch(updateUserAnswerQuestion(authedUser,question_id,text));
     };
 
     if(!authedUser){
