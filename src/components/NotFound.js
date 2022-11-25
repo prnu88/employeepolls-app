@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import Nav from "./Nav";
+import { connect } from 'react-redux';
 
 const NotFound = () => {
     return(
@@ -12,4 +13,9 @@ const NotFound = () => {
     );
 }
 
-export default NotFound;
+const mapStateToProps = ({authedUser,users}) => ({
+    authedUser,
+    currentUser: users[authedUser]
+})
+
+export default connect(mapStateToProps)(NotFound);

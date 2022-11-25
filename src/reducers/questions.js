@@ -14,7 +14,6 @@ export default function questions(state = {}, action) {
           [action.question.id]: action.question,
         };
       case UPDATEUSER_ANSWER_QUESTION:
-        alert("Update New" + action.answer +  action.qid +  action.authedUser);
         return {
           ...state,
           [action.qid] : {

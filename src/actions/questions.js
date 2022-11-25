@@ -9,7 +9,6 @@ export const RECEIVE_QUESTIONS = "RECEIVE_QUESTIONS";
 export const UPDATEUSER_ANSWER_QUESTION = "UPDATEUSER_ANSWER_QUESTION";
 
 export function updateUserAnswerQuestion(authedUser,qid,answer){
-  alert("updateUserAnswerQuestion" + answer +  qid +  authedUser);
   return {
     type: UPDATEUSER_ANSWER_QUESTION,
     authedUser, 
