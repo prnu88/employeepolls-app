@@ -19,7 +19,7 @@ const App = (props) => {
           <Route path="/leaderboard" exact element={<LeaderBoard/>}></Route>
           <Route path="/add" exact element={<AddNewPoll/>}></Route>
           <Route path="/questions/:question_id" exact element={<PollDetails/>}></Route>
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
     </Fragment>
