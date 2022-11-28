@@ -3,11 +3,17 @@ import Nav from "./Nav";
 import {connect} from "react-redux";
 import { useNavigate } from "react-router";
 import { handleAddQuestion } from "../actions/questions";
+import LoginPage from "./LoginPage";
 
 function AddNewPoll({authedUser,dispatch}){
     const navigate = useNavigate();
     const [firstOption,setFirstOption] = useState("");
     const [secondOption,setSecondOption] = useState("");
+    
+    if(!authedUser){
+        return (<LoginPage></LoginPage>)
+    }
+
 
     function handleNewPollSubmit(e){
         e.preventDefault();

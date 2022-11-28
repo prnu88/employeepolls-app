@@ -1,8 +1,13 @@
 import Nav from "./Nav";
 import { connect } from 'react-redux';
+import LoginPage from "./LoginPage";
 
 function LeaderBoard(props) {
   const {usersIds,users}= props;
+
+  if(!props.authedUser){
+    return (<LoginPage></LoginPage>)
+  }
 
     return (<div>
         <Nav></Nav>

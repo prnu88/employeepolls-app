@@ -1,8 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import Nav from "./Nav";
+import { connect } from "react-redux";
+import LoginPage from "./LoginPage";
 
-const NotFound = () => {
+const NotFound = (props) => {
+    if(!props.authedUser){
+        return (<LoginPage></LoginPage>)
+    }
+
     return(
         <div>
         <Nav></Nav>
@@ -12,4 +18,8 @@ const NotFound = () => {
     );
 }
 
-export default NotFound;
+const mapStateToProps = ({authedUser}) => ({
+    authedUser
+  });
+  
+export default connect(mapStateToProps)(NotFound);

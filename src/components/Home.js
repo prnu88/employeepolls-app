@@ -2,16 +2,22 @@ import Poll from "./Poll";
 import Nav from "./Nav";
 import { connect } from 'react-redux';
 import { useState } from "react";
+import LoginPage from "./LoginPage";
 
 function Home(props){    
     const [answeredQuestionVisible, setAnsweredQuestionVisible] = useState(false);  
     const [unAnsweredQuestionVisible, setUnAnsweredQuestionVisible] = useState(true);  
     const {users,questions} = props;
 
+    if(!props.authedUser){
+        return (<LoginPage></LoginPage>)
+    }
+
     const currentUser = users[props.authedUser];
     const answers = currentUser.answers;
     const answeredQuestionsArr = [];
     const unAnsweredQuestionsArr = [];
+
 
     for (const key in questions) {
         if( Object.getOwnPropertyNames(answers).includes(key) ){
